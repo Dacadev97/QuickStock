@@ -130,6 +130,30 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('form').on('submit', function(e){
+                e.preventDefault();
+                var form = this;
+                var stock = parseInt($('#stock').val());
+                var cantidad = parseInt($('#quantity').val());
+                if (stock <= 0) {
+                    swal('Error', 'No es posible realizar la venta, el producto no tiene stock.', 'error');
+                } else if (cantidad > stock) {
+                    swal('Error', 'No es posible realizar la venta, la cantidad ingresada excede el stock disponible.', 'error');
+                } else {
+                    swal({
+                        title: 'Éxito',
+                        text: 'La venta se realizó con éxito.',
+                        icon: 'success'
+                    }).then(function() {
+                        form.submit();
+                    });
+                }
+            });
+        });
+        </script>
 </body>
 
 </html>
