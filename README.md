@@ -10,7 +10,7 @@ QuickStock es una aplicación de gestión de inventario que permite a los usuari
 
 ## Instalación
 
-1. Clona este repositorio: `git clone https://github.com/yourusername/quickstock.git`
+1. Clona este repositorio: `git clone https://github.com/DakaAlvarez97/QuickStock.git`
 2. Navega al directorio del proyecto: `cd quickstock`
 3. Instala las dependencias: `composer install`
 4. Copia el archivo de entorno de ejemplo y configura tus variables de entorno: `cp .env.example .env`
