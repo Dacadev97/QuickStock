@@ -120,6 +120,7 @@ class ProductController extends Controller
 
                 $sale = new Sale;
                 $sale->product_id = $product->id;
+                $sale->user_id = auth()->user()->id;
                 $sale->quantity = $quantity;
                 $sale->save();
 
