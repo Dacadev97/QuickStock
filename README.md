@@ -16,7 +16,7 @@ QuickStock es una aplicación de gestión de inventario que permite a los usuari
 4. Copia el archivo de entorno de ejemplo y configura tus variables de entorno: `cp .env.example .env`
 5. Genera una clave de aplicación: `php artisan key:generate`
 6. Ejecuta las migraciones: `php artisan migrate`
-7. Ejecuta los seeders: `php artisan db:seed`
+7. Ejecuta los seeders: `composer require fakerphp/faker && php artisan db:seed --class=ProductsTableSeeder`
 8. Ejecuta npm: `npm install`
 9. Generar JWT: `php artisan jwt:secret`
 10. Inicia el servidor de desarrollo: `php artisan serve`
