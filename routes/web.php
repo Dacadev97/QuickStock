@@ -36,15 +36,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard')->middleware('auth');
 
-
-
 Route::get('/ventas', function () {
     $products = Product::all();
     $sales = Sale::all();
     return view('ventas', ['products' => $products], ['sales' => $sales]);
 })->name('ventas')->middleware('auth');
-
-
 
 Route::controller(ProductController::class)->group(function(){
     Route::get('/productos', 'index')->name('productos')->middleware('auth');
