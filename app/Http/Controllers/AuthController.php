@@ -19,11 +19,9 @@ class AuthController extends Controller
         $credentials = $request->only('username', 'password');
 
         if (Auth::attempt($credentials)) {
-            // Autenticación exitosa, redirige al dashboard
             return redirect()->route('dashboard');
         }
 
-        // Autenticación fallida, redirige de vuelta al formulario de login
         return back()->withErrors([
             'username' => 'The provided credentials do not match our records.',
         ]);
