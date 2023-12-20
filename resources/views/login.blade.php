@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Login</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
@@ -7,7 +8,7 @@
     <style>
         body::before {
             content: "";
-            background: url('/img/fondo.jpg') no-repeat center center fixed; 
+            background: url('/img/fondo.jpg') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -21,11 +22,13 @@
             z-index: -1;
             font-family: 'Montserrat', sans-serif;
         }
+
         .card {
             background-color: rgba(0, 0, 0, 0.902);
             color: white;
             width: 50%;
         }
+
         .container {
             display: flex;
             justify-content: center;
@@ -34,6 +37,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="card text-center">
@@ -59,4 +63,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

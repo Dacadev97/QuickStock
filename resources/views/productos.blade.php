@@ -16,7 +16,6 @@
             padding: 0.5rem;
             font-size: 13.5px;
         }
-        
     </style>
 </head>
 
@@ -90,7 +89,8 @@
                         <!-- Campos del formulario para agregar productos -->
                         <div class="form-group">
                             <label for="nombre_producto">Nombre de producto</label>
-                            <input type="text" class="form-control" id="nombre_producto" name="nombre_producto" required>
+                            <input type="text" class="form-control" id="nombre_producto" name="nombre_producto"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="referencia">Referencia</label>
@@ -98,11 +98,13 @@
                         </div>
                         <div class="form-group">
                             <label for="precio">Precio</label>
-                            <input type="number" class="form-control" id="precio" name="precio" step="0.01" required>
+                            <input type="number" class="form-control" id="precio" name="precio" step="0.01"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="peso">Peso</label>
-                            <input type="number" class="form-control" id="peso" name="peso" step="0.1" required>
+                            <input type="number" class="form-control" id="peso" name="peso" step="0.1"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="categoria">Categoría</label>
@@ -110,12 +112,13 @@
                         </div>
                         <div class="form-group">
                             <label for="stock">Stock</label>
-                            <input type="number" class="form-control" id="stock" name="stock" step="1" required>
+                            <input type="number" class="form-control" id="stock" name="stock" step="1"
+                                required>
                         </div>
-                    
+
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>
-                    
+
                 </div>
             </div>
         </div>
@@ -141,27 +144,33 @@
                             <!-- Campos del formulario para editar productos -->
                             <div class="form-group">
                                 <label for="nombre_producto">Nombre de producto</label>
-                                <input type="text" class="form-control" id="nombre_producto" name="nombre_producto" value="{{ $product->nombre_producto }}" required>
+                                <input type="text" class="form-control" id="nombre_producto"
+                                    name="nombre_producto" value="{{ $product->nombre_producto }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="referencia">Referencia</label>
-                                <input type="text" class="form-control" id="referencia" name="referencia" value="{{ $product->referencia }}" required>
+                                <input type="text" class="form-control" id="referencia" name="referencia"
+                                    value="{{ $product->referencia }}" required>
                             </div>
-                        <div class="form-group">
+                            <div class="form-group">
                                 <label for="precio">Precio</label>
-                                <input type="number" class="form-control" id="precio" name="precio" value="{{ $product->precio }}" required>
+                                <input type="number" class="form-control" id="precio" name="precio"
+                                    value="{{ $product->precio }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="peso">Peso</label>
-                                <input type="number" class="form-control" id="peso" name="peso" value="{{ $product->peso }}" required>
+                                <input type="number" class="form-control" id="peso" name="peso"
+                                    value="{{ $product->peso }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="categoria">Categoría</label>
-                                <input type="text" class="form-control" id="categoria" name="categoria" value="{{ $product->categoria }}" required>
+                                <input type="text" class="form-control" id="categoria" name="categoria"
+                                    value="{{ $product->categoria }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="stock">Stock</label>
-                                <input type="number" class="form-control" id="stock" name="stock" value="{{ $product->stock }}" required>
+                                <input type="number" class="form-control" id="stock" name="stock"
+                                    value="{{ $product->stock }}" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Guardar cambios</button>
@@ -172,16 +181,13 @@
         </div>
     @endforeach
 
-    <!-- Include jQuery y Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <!-- Tu código JavaScript -->
     <script>
-        $(document).ready(function () {
-            $('#addProductModal').on('hidden.bs.modal', function () {
-                // Limpiar el formulario cuando se cierra el modal
+        $(document).ready(function() {
+            $('#addProductModal').on('hidden.bs.modal', function() {
                 $(this).find('form')[0].reset();
             });
         });

@@ -18,6 +18,4 @@ class Product extends Model
         'stock',
         'fecha_creacion',
     ];
-
-    
 }

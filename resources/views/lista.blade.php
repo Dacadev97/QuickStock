@@ -16,14 +16,11 @@
             padding: 0.5rem;
             font-size: 13.5px;
         }
-        
     </style>
 </head>
 
 <body>
     @include('layouts.navbar')
-
-
 
     <div class="container mt-5">
         <h1 style="text-align: center; margin-bottom: 20px;">Lista de productos</h1>
@@ -57,7 +54,7 @@
             </table>
         </div>
     </div>
-    
+
 </body>
 
 </html>

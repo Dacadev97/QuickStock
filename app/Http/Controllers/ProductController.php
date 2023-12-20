@@ -109,7 +109,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
 
-        
+
         if ($product->stock > 0) {
             $quantity = $request->input('quantity');
 
@@ -138,12 +138,12 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-    
+
         if (!$product) {
-            
+
             return redirect()->back()->with('error', 'Producto no encontrado');
         }
-    
+
         return view('ventas', compact('products'));
     }
 }
